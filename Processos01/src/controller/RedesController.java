@@ -81,7 +81,7 @@ public class RedesController
 				String linha =buffer.readLine();
 				while(linha!=null)
 				{	
-					if(linha.contains("inet"))
+					if(linha.contains("inet")&& !linha.contains("6"))
 					{
 					System.out.println(linha);
 					}
@@ -157,7 +157,7 @@ public class RedesController
 					if(linha.contains("rtt"))
 					{
 					String []arrLinha=linha.split("/");
-					System.out.print(arrLinha[7]+" :"+arrLinha[4]);
+					System.out.print("Tempo médio de ping :"+arrLinha[6]);
 					}
 					linha=buffer.readLine();
 				}
